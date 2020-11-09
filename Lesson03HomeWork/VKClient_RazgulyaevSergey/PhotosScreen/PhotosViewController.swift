@@ -51,7 +51,7 @@ class PhotosViewController: UIViewController {
 //MARK: - Interaction with Network
 extension PhotosViewController {
     func loadPhotosFromNetWork() {
-        networkService.getPhotos(token: Session.instance.token, ownerID: friendID!, albumID: .profile, photoCount: 10) { [weak self] (results) in
+        networkService.getPhotos(token: Session.instance.token, ownerID: friendID!, albumID: .profile, photoCount: 10) { [weak self] results in
             self?.photosWithAdapter = results
             self?.viewModels = self?.viewModelFactory.constructViewModel(from: results) as! [PhotoViewModel]
             self?.collectionView.reloadData()
@@ -62,7 +62,7 @@ extension PhotosViewController {
 //MARK: - Collection Data Source Methods
 extension PhotosViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        photosWithAdapter.count
+        viewModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

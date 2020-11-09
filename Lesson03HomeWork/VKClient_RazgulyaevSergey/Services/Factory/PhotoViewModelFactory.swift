@@ -10,7 +10,7 @@ import UIKit
 
 class PhotoViewModelFactory {
     func constructViewModel(from photos: [PhotoItemsWithAdapter]) -> [PhotoViewModel] {
-        return photos.compactMap(self.getViewModel)
+        return photos.compactMap(getViewModel)
     }
     
     private func getViewModel(from photo: PhotoItemsWithAdapter) -> PhotoViewModel {

@@ -18,19 +18,25 @@ class PhotoItemsAdapter {
     
     private let photoItemsService = NetworkService()
     private var realmNotificationToken: [Int: NotificationToken] = [:]
+    private let realmManagerPhotos = RealmManager.instance
     
     func getPhotos(token: String, ownerID: Int, albumID: AlbumID, photoCount: Int, then completion: @escaping ([PhotoItemsWithAdapter]) -> Void) {
-        guard let realm = try? Realm(),
-            let realmPhoto = realm.object(ofType: PhotoItems.self, forPrimaryKey: ownerID) else { return }
-        
+        var photosFromRealm: Results<PhotoItems>? {
+            let photosFromRealm: Results<PhotoItems>? = realmManagerPhotos?.getObjects().filter("ownerID = \(ownerID)")
+            return photosFromRealm
+        }
+        guard let realmPhotos = photosFromRealm else {
+                print("No realmPhoto")
+                return
+        }
         realmNotificationToken[ownerID]?.invalidate()
         
-        let token = realmPhoto.observe() {[weak self] (changes) in
+        let token = realmPhotos.observe() {[weak self] (changes) in
             guard let self = self else { return }
             switch changes {
             case .initial:
                 break
-                
+
             case .update(let realmPhotos, _, _, _):
                 var photos: [PhotoItemsWithAdapter] = []
                 realmPhotos.forEach { (realmPhoto) in
@@ -38,13 +44,13 @@ class PhotoItemsAdapter {
                 }
                 self.realmNotificationToken[ownerID]?.invalidate()
                 completion(photos)
-                
+
             case .error(let error):
                 print(error.localizedDescription)
             }
         }
-        
-        realmNotificationToken[ownerID] = token
+
+        self.realmNotificationToken[ownerID] = token
         photoItemsService.loadPhotosForAdapter(token: Session.instance.token, ownerID: ownerID, albumID: .profile, photoCount: 10)
     }
     

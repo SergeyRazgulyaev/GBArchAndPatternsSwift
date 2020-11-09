@@ -102,9 +102,8 @@ class NetworkService {
         NetworkService.sessionAF.request(baseUrl + path, method: .get, parameters: params).responseData { response in
             guard let data = response.value else { return }
             do {
-                guard let photos = try JSONDecoder().decode(Photo.self, from: data).response?.items else { return }
-                try? self.realmManager?.add(objects: Array(photos))
-                print(Array(photos))
+                guard let photos = try JSONDecoder().decode(Photo.self, from: data).response else { return }
+                try? self.realmManager?.add(objects: [photos])
             } catch {
                 print(error.localizedDescription)
             }

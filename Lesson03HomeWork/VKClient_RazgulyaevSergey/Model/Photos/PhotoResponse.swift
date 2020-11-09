@@ -7,8 +7,18 @@
 //
 
 import Foundation
+import RealmSwift
 
-class PhotoResponse: Decodable {
-    let count: Int = 0
-    let items: [PhotoItems]?
+class PhotoResponse: Object, Decodable {
+    @objc dynamic var count: Int = 0
+    var items = List<PhotoItems>()
+    
+    enum CodingKeys: String, CodingKey {
+        case count
+        case items 
+    }
+    
+    override class func primaryKey() -> String? {
+        return "count"
+    }
 }
