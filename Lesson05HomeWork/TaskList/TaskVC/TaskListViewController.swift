@@ -13,11 +13,12 @@ class TaskListViewController: UITableViewController {
     @IBOutlet weak var backBarButtonItem: UIBarButtonItem!
     
     //MARK: - Base properties
-    //    private var taskHolder: [[TaskList]] = []
-    private var mainTaskHolder: [String: [Task]] = ["0":[]]
+    private var mainTaskHolder: [String: [Task]] = ["0":[Task(name: "initial")]]
     private var keyOfTask = "0"
     private var taskHolder: [Task] = [Task(name: "Root")]
-    private var nextPresentTasks: [Task] = [Task(name: "")]
+    private var previousPresentedTasks: [Task] = [Task(name: "initial")]
+    private var nowPresentedTasks: [Task] = [Task(name: "initial")]
+    private var nextPresentedTasks: [Task] = [Task(name: "initial")]
     
     //MARK: - Cell properties
     private let taskCellIdentifier = "TaskCell"
@@ -36,7 +37,7 @@ class TaskListViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nextPresentTasks[0].nestedTasks.count
+        return nowPresentedTasks[0].nestedTasks.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,32 +51,34 @@ class TaskListViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        cell.configureTaskNameLabel(taskNameLabelText: nextPresentTasks[0].nestedTasks[indexPath.row].name)
-        cell.configureNumberOfNestedTasksLabel(numberOfNestedTasksLabelText: nextPresentTasks[0].nestedTasks[indexPath.row].numberOfNestedTasks)
-        
+        cell.configureTaskNameLabel(taskNameLabelText: nowPresentedTasks[0].nestedTasks[indexPath.row].name)
+        if nextPresentedTasks.count == 0 {
+            cell.configureNumberOfNestedTasksLabel(numberOfNestedTasksLabelText: 0)
+        } else {
+            cell.configureNumberOfNestedTasksLabel(numberOfNestedTasksLabelText: nextPresentedTasks[0].nestedTasks.count)
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         backBarButtonItem.tintColor = .blue
-        mainTaskHolder[keyOfTask] = nextPresentTasks
-        print("saved")
-        print("keyOfTask \(keyOfTask)")
-        print("mainTaskHolder[keyOfTask].name \(String(describing: mainTaskHolder[keyOfTask]?[0].name))")
-        print("mainTaskHolder[keyOfTask].numberOfNestedTasks \(String(describing: mainTaskHolder[keyOfTask]?[0].numberOfNestedTasks))")
-        print("mainTaskHolder[keyOfTask].nestedTasks.count \(String(describing: mainTaskHolder[keyOfTask]?[0].nestedTasks.count))\n")
-        
+        mainTaskHolder[keyOfTask] = nowPresentedTasks
+        previousPresentedTasks = mainTaskHolder[keyOfTask] ?? [Task(name: "111")]
         keyOfTask = "\(keyOfTask)\(indexPath.row)"
-        nextPresentTasks[0].name = taskHolder[0].nestedTasks[indexPath.row].name
-        nextPresentTasks[0].numberOfNestedTasks = 0
-        nextPresentTasks[0].nestedTasks = []
-        mainTaskHolder[keyOfTask] = nextPresentTasks
-
-        print("\n new")
-        print("keyOfTask \(keyOfTask)")
-        print("mainTaskHolder[keyOfTask].name \(String(describing: mainTaskHolder[keyOfTask]?[0].name))")
-        print("mainTaskHolder[keyOfTask].numberOfNestedTasks \(String(describing: mainTaskHolder[keyOfTask]?[0].numberOfNestedTasks))")
-        print("mainTaskHolder[keyOfTask].nestedTasks.count \(String(describing: mainTaskHolder[keyOfTask]?[0].nestedTasks.count))\n")
+        
+        if mainTaskHolder[keyOfTask]?.count == nil {
+            mainTaskHolder[keyOfTask] = nextPresentedTasks
+            nextPresentedTasks[0].name = ""
+            nextPresentedTasks[0].numberOfNestedTasks = 0
+            nextPresentedTasks[0].nestedTasks = []
+            nowPresentedTasks = mainTaskHolder[keyOfTask] ?? [Task(name: "111")]
+            taskHolder = [Task(name: "empty")]
+            taskHolder[0].nestedTasks = []
+        } else {
+            nowPresentedTasks = mainTaskHolder[keyOfTask] ?? [Task(name: "111")]
+            taskHolder = [Task(name: "empty")]
+            taskHolder[0].nestedTasks = []
+        }
         tableView.reloadData()
     }
     
@@ -104,33 +107,20 @@ class TaskListViewController: UITableViewController {
         guard !newTask.name.isEmpty else { return }
         taskHolder[0].nestedTasks.append(newTask)
         taskHolder[0].numberOfNestedTasks = taskHolder[0].nestedTasks.count
-        nextPresentTasks = taskHolder
+        nowPresentedTasks = taskHolder
         tableView.reloadData()
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
         if keyOfTask != "0" {
-            if keyOfTask == "0" {
-                backBarButtonItem.tintColor = .white
-            }
-            mainTaskHolder[keyOfTask] = nextPresentTasks
-            print("saved with back")
-            print("old keyOfTask \(keyOfTask)")
-            print("mainTaskHolder[keyOfTask].name \(String(describing: mainTaskHolder[keyOfTask]?[0].name))")
-            print("mainTaskHolder[keyOfTask].numberOfNestedTasks \(String(describing: mainTaskHolder[keyOfTask]?[0].numberOfNestedTasks))")
-            print("mainTaskHolder[keyOfTask].nestedTasks.count \(String(describing: mainTaskHolder[keyOfTask]?[0].nestedTasks.count))\n")
-            print("Back")
-
+            mainTaskHolder[keyOfTask] = nowPresentedTasks
+            nextPresentedTasks = mainTaskHolder[keyOfTask] ?? [Task(name: "111")]
             keyOfTask = String(keyOfTask.dropLast())
-
-//            presentedTasks = mainTaskHolder[keyOfTask] ?? [Task(name: "111")]
-            print("keyOfTask \(keyOfTask)")
-            print("mainTaskHolder[keyOfTask].name \(String(describing: mainTaskHolder[keyOfTask]?[0].name))")
-            print("mainTaskHolder[keyOfTask].numberOfNestedTasks \(String(describing: mainTaskHolder[keyOfTask]?[0].numberOfNestedTasks))")
-            print("mainTaskHolder[keyOfTask].nestedTasks.count \(String(describing: mainTaskHolder[keyOfTask]?[0].nestedTasks.count))")
-            nextPresentTasks = mainTaskHolder[keyOfTask] ?? [Task(name: "111")]
-
+            nowPresentedTasks = mainTaskHolder[keyOfTask] ?? [Task(name: "111")]
             tableView.reloadData()
+        }
+        if keyOfTask == "0" {
+            backBarButtonItem.tintColor = .white
         }
     }
 }
