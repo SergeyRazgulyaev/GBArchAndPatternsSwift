@@ -28,7 +28,7 @@ class Milk: CoffeeDecorator {
     required init(base: Coffee) {
         self.base = base
     }
-    lazy var cost: Int = base.cost + 200
+    lazy var cost: Int = base.cost + 20
 }
 
 class Whip: CoffeeDecorator {
@@ -36,7 +36,7 @@ class Whip: CoffeeDecorator {
     required init(base: Coffee) {
         self.base = base
     }
-    lazy var cost: Int = base.cost + 300
+    lazy var cost: Int = base.cost + 30
 }
 
 class Sugar: CoffeeDecorator {
@@ -44,7 +44,7 @@ class Sugar: CoffeeDecorator {
     required init(base: Coffee) {
         self.base = base
     }
-    lazy var cost: Int = base.cost + 100
+    lazy var cost: Int = base.cost + 10
 }
 
 
