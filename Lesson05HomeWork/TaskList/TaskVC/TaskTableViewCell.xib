@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="70" id="KGk-i7-Jjw" customClass="TaskTableViewCell" customModule="TaskList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TaskName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqc-ZB-MAU">
+                        <rect key="frame" x="15" y="15" width="350" height="20"/>
+                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nested tasks:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVc-XJ-0D1">
+                        <rect key="frame" x="15" y="40" width="86" height="16"/>
+                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67k-3X-lFk">
+                        <rect key="frame" x="106" y="40" width="8" height="16"/>
+                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="67k-3X-lFk" firstAttribute="leading" secondItem="QVc-XJ-0D1" secondAttribute="trailing" constant="5" id="1b1-qs-xyo"/>
+                    <constraint firstItem="67k-3X-lFk" firstAttribute="top" secondItem="Yqc-ZB-MAU" secondAttribute="bottom" constant="5" id="5Wf-fF-Sse"/>
+                    <constraint firstItem="QVc-XJ-0D1" firstAttribute="top" secondItem="Yqc-ZB-MAU" secondAttribute="bottom" constant="5" id="JvO-fT-AfS"/>
+                    <constraint firstAttribute="trailing" secondItem="Yqc-ZB-MAU" secondAttribute="trailing" constant="15" id="QuJ-3A-YFu"/>
+                    <constraint firstAttribute="bottom" secondItem="QVc-XJ-0D1" secondAttribute="bottom" constant="14" id="eug-cm-tkd"/>
+                    <constraint firstItem="Yqc-ZB-MAU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gwu-w4-Bgr"/>
+                    <constraint firstItem="QVc-XJ-0D1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="juv-co-Tsu"/>
+                    <constraint firstItem="Yqc-ZB-MAU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="odJ-8r-k58"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nestedTaskLabel" destination="QVc-XJ-0D1" id="vxZ-xi-igs"/>
+                <outlet property="numberOfNestedTasksLabel" destination="67k-3X-lFk" id="PVt-di-4xC"/>
+                <outlet property="taskNameLabel" destination="Yqc-ZB-MAU" id="Bp7-qn-4Uv"/>
+            </connections>
+            <point key="canvasLocation" x="9" y="19"/>
+        </tableViewCell>
+    </objects>
+</document>
