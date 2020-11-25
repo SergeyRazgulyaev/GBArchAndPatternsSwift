@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Coffee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cofee2" translatesAutoresizingMaskIntoConstraints="NO" id="oql-eL-IoZ">
+                                <rect key="frame" x="50" y="40" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="b6x-95-3yC"/>
+                                    <constraint firstAttribute="width" secondItem="oql-eL-IoZ" secondAttribute="height" multiplier="1:1" id="pET-8B-8HL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Whip" translatesAutoresizingMaskIntoConstraints="NO" id="WWf-zI-dOU">
+                                <rect key="frame" x="50" y="323.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LiI-pt-Ahl"/>
+                                    <constraint firstAttribute="width" secondItem="WWf-zI-dOU" secondAttribute="height" multiplier="1:1" id="Lo3-EL-SHm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sugar" translatesAutoresizingMaskIntoConstraints="NO" id="qEW-Z3-x8i">
+                                <rect key="frame" x="50" y="438.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7eC-P3-Su2"/>
+                                    <constraint firstAttribute="width" secondItem="qEW-Z3-x8i" secondAttribute="height" multiplier="1:1" id="e8H-bR-LQO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Milk" translatesAutoresizingMaskIntoConstraints="NO" id="NfY-BJ-7dk">
+                                <rect key="frame" x="50" y="208.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="NfY-BJ-7dk" secondAttribute="height" multiplier="1:1" id="Bek-xK-dCL"/>
+                                    <constraint firstAttribute="width" constant="100" id="uq5-0J-sdn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fvb-ZR-e81">
+                                <rect key="frame" x="200" y="49" width="136" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Milk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyL-iM-cGn">
+                                <rect key="frame" x="200" y="212.5" width="39" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxn-wW-2WC">
+                                <rect key="frame" x="200" y="327.5" width="49" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tg-k4-hl0">
+                                <rect key="frame" x="200" y="442.5" width="59" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoB-6N-gzm">
+                                <rect key="frame" x="200" y="263.5" width="98" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="2h5-a3-n1n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <state key="normal" title="+ Add to order">
+                                    <color key="titleColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToOrderMilkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Rk-Tt-TRR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFP-2X-VZs">
+                                <rect key="frame" x="200" y="285.5" width="139" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="tT1-ns-3ha"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <state key="normal" title="- Remove from order">
+                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeFromOrderMilkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5HQ-Mu-tfr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chV-Og-XsJ">
+                                <rect key="frame" x="330.5" y="264" width="8.5" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbY-EI-92d">
+                                <rect key="frame" x="200" y="378.5" width="98" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="dbl-Ju-fCs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <state key="normal" title="+ Add to order">
+                                    <color key="titleColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToOrderWhipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnH-bc-AJR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHZ-kQ-p7E">
+                                <rect key="frame" x="200" y="400.5" width="139" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="0cb-tb-TdF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <state key="normal" title="- Remove from order">
+                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeFromOrderWhipButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caO-b7-MF5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWw-Rn-Mq5">
+                                <rect key="frame" x="330.5" y="380" width="8.5" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-bd-1sI">
+                                <rect key="frame" x="200" y="515.5" width="139" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="DlO-Cz-vkK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <state key="normal" title="- Remove from order">
+                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeFromOrderSugarButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrR-Sq-cpZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8aY-tW-npf">
+                                <rect key="frame" x="330.5" y="494" width="8.5" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM7-43-mZ5">
+                                <rect key="frame" x="124.5" y="563.5" width="126" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll5-qY-o5i">
+                                <rect key="frame" x="181.5" y="592.5" width="12" height="23.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXz-U3-Z5I">
+                                <rect key="frame" x="200" y="241.5" width="36" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Da-a4-tpa">
+                                <rect key="frame" x="330.5" y="241.5" width="8.5" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xG6-PK-10a">
+                                <rect key="frame" x="200" y="356.5" width="36" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK9-Yb-qlZ">
+                                <rect key="frame" x="330.5" y="356.5" width="8.5" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnQ-kg-L8d">
+                                <rect key="frame" x="200" y="471.5" width="36" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veO-0F-HhN">
+                                <rect key="frame" x="330.5" y="471.5" width="8.5" height="17"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additives to your Coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTN-TD-ydb">
+                                <rect key="frame" x="71" y="175" width="233" height="23.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crs-YY-MpG">
+                                <rect key="frame" x="200" y="78" width="51.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDJ-8a-fyN">
+                                <rect key="frame" x="200" y="106.5" width="12" height="24"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiI-pl-7WM">
+                                <rect key="frame" x="200" y="493.5" width="98" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="Mxk-MI-nbh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <state key="normal" title="+ Add to order">
+                                    <color key="titleColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToOrderSugarButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47S-4n-NGN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTw-EK-tKG">
+                                <rect key="frame" x="250.5" y="620" width="38" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="CnH-Zl-jnN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="Buy">
+                                    <color key="titleColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIn-JY-n6m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN3-W6-MHU">
+                                <rect key="frame" x="68.5" y="620" width="56" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="7ii-y4-dE1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bci-Md-iL4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.21270330033483484" green="0.20319285610505672" blue="0.25647288564253812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vDJ-8a-fyN" firstAttribute="leading" secondItem="crs-YY-MpG" secondAttribute="leading" id="0Pk-e3-dBS"/>
+                            <constraint firstItem="Ll5-qY-o5i" firstAttribute="top" secondItem="oM7-43-mZ5" secondAttribute="bottom" constant="5" id="0vM-Mh-o1b"/>
+                            <constraint firstItem="vxn-wW-2WC" firstAttribute="leading" secondItem="WWf-zI-dOU" secondAttribute="trailing" constant="50" id="1GN-r2-YPd"/>
+                            <constraint firstItem="oM7-43-mZ5" firstAttribute="leading" secondItem="yN3-W6-MHU" secondAttribute="trailing" id="2qc-wK-GeF"/>
+                            <constraint firstItem="NfY-BJ-7dk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5bi-Bx-7fM"/>
+                            <constraint firstItem="BXz-U3-Z5I" firstAttribute="top" secondItem="vyL-iM-cGn" secondAttribute="bottom" constant="5" id="8Md-FU-TX6"/>
+                            <constraint firstItem="vnQ-kg-L8d" firstAttribute="leading" secondItem="qEW-Z3-x8i" secondAttribute="trailing" constant="50" id="8ss-nD-aem"/>
+                            <constraint firstItem="3Da-a4-tpa" firstAttribute="trailing" secondItem="KFP-2X-VZs" secondAttribute="trailing" id="94r-UP-s7v"/>
+                            <constraint firstItem="chV-Og-XsJ" firstAttribute="trailing" secondItem="KFP-2X-VZs" secondAttribute="trailing" id="9TX-af-MRn"/>
+                            <constraint firstItem="Fvb-ZR-e81" firstAttribute="leading" secondItem="crs-YY-MpG" secondAttribute="leading" id="DDh-ds-YJq"/>
+                            <constraint firstItem="VTw-EK-tKG" firstAttribute="top" secondItem="Ll5-qY-o5i" secondAttribute="bottom" constant="4" id="DNO-t3-y0T"/>
+                            <constraint firstItem="vDJ-8a-fyN" firstAttribute="top" secondItem="crs-YY-MpG" secondAttribute="bottom" constant="5" id="DNZ-x0-CHj"/>
+                            <constraint firstItem="chV-Og-XsJ" firstAttribute="firstBaseline" secondItem="OoB-6N-gzm" secondAttribute="firstBaseline" id="F5L-JW-Nej"/>
+                            <constraint firstItem="TiI-pl-7WM" firstAttribute="top" secondItem="vnQ-kg-L8d" secondAttribute="bottom" constant="5" id="I7T-9v-Itk"/>
+                            <constraint firstItem="pbY-EI-92d" firstAttribute="leading" secondItem="WWf-zI-dOU" secondAttribute="trailing" constant="50" id="Nnd-3B-vrh"/>
+                            <constraint firstItem="GTN-TD-ydb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O7G-RH-r1H"/>
+                            <constraint firstItem="keQ-bd-1sI" firstAttribute="leading" secondItem="qEW-Z3-x8i" secondAttribute="trailing" constant="50" id="OUQ-eD-l4A"/>
+                            <constraint firstItem="xG6-PK-10a" firstAttribute="leading" secondItem="WWf-zI-dOU" secondAttribute="trailing" constant="50" id="PNm-z5-jAH"/>
+                            <constraint firstItem="eWw-Rn-Mq5" firstAttribute="trailing" secondItem="bHZ-kQ-p7E" secondAttribute="trailing" id="PsR-iy-Iih"/>
+                            <constraint firstItem="bHZ-kQ-p7E" firstAttribute="leading" secondItem="WWf-zI-dOU" secondAttribute="trailing" constant="50" id="Qc6-zd-r8i"/>
+                            <constraint firstItem="GTN-TD-ydb" firstAttribute="top" secondItem="oql-eL-IoZ" secondAttribute="bottom" constant="35" id="Qhd-wS-bBC"/>
+                            <constraint firstItem="UK9-Yb-qlZ" firstAttribute="firstBaseline" secondItem="xG6-PK-10a" secondAttribute="firstBaseline" id="RM2-pl-L4D"/>
+                            <constraint firstItem="OoB-6N-gzm" firstAttribute="leading" secondItem="NfY-BJ-7dk" secondAttribute="trailing" constant="50" id="RSG-Jo-mNH"/>
+                            <constraint firstItem="NfY-BJ-7dk" firstAttribute="top" secondItem="GTN-TD-ydb" secondAttribute="bottom" constant="10" id="ScN-HZ-ahz"/>
+                            <constraint firstItem="qEW-Z3-x8i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="TiO-5B-TJN"/>
+                            <constraint firstItem="vyL-iM-cGn" firstAttribute="top" secondItem="NfY-BJ-7dk" secondAttribute="top" constant="4" id="UYg-oo-nZg"/>
+                            <constraint firstItem="eWw-Rn-Mq5" firstAttribute="firstBaseline" secondItem="pbY-EI-92d" secondAttribute="firstBaseline" constant="1" id="Urc-s6-KSL"/>
+                            <constraint firstItem="pbY-EI-92d" firstAttribute="top" secondItem="xG6-PK-10a" secondAttribute="bottom" constant="5" id="VUZ-XH-TNa"/>
+                            <constraint firstItem="3Da-a4-tpa" firstAttribute="firstBaseline" secondItem="BXz-U3-Z5I" secondAttribute="firstBaseline" id="Vca-ps-b6H"/>
+                            <constraint firstItem="oM7-43-mZ5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vff-K8-Kiu"/>
+                            <constraint firstItem="crs-YY-MpG" firstAttribute="top" secondItem="Fvb-ZR-e81" secondAttribute="bottom" constant="5" id="WiL-op-lDP"/>
+                            <constraint firstItem="KFP-2X-VZs" firstAttribute="top" secondItem="OoB-6N-gzm" secondAttribute="bottom" constant="5" id="WpR-EP-WId"/>
+                            <constraint firstItem="KFP-2X-VZs" firstAttribute="leading" secondItem="NfY-BJ-7dk" secondAttribute="trailing" constant="50" id="Wvc-gE-iIw"/>
+                            <constraint firstItem="Ll5-qY-o5i" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Y5z-7B-LlH"/>
+                            <constraint firstItem="Fvb-ZR-e81" firstAttribute="leading" secondItem="oql-eL-IoZ" secondAttribute="trailing" constant="50" id="agA-RB-5Wb"/>
+                            <constraint firstItem="UK9-Yb-qlZ" firstAttribute="trailing" secondItem="bHZ-kQ-p7E" secondAttribute="trailing" id="bJe-1c-wFZ"/>
+                            <constraint firstItem="keQ-bd-1sI" firstAttribute="top" secondItem="TiI-pl-7WM" secondAttribute="bottom" constant="5" id="by3-7R-TXY"/>
+                            <constraint firstItem="VTw-EK-tKG" firstAttribute="leading" secondItem="oM7-43-mZ5" secondAttribute="trailing" id="cuQ-fA-ckx"/>
+                            <constraint firstItem="4tg-k4-hl0" firstAttribute="leading" secondItem="qEW-Z3-x8i" secondAttribute="trailing" constant="50" id="h5d-jJ-DUn"/>
+                            <constraint firstItem="TiI-pl-7WM" firstAttribute="leading" secondItem="qEW-Z3-x8i" secondAttribute="trailing" constant="50" id="hLo-PP-peq"/>
+                            <constraint firstItem="WWf-zI-dOU" firstAttribute="top" secondItem="NfY-BJ-7dk" secondAttribute="bottom" constant="15" id="hu1-sK-4Yf"/>
+                            <constraint firstItem="vyL-iM-cGn" firstAttribute="leading" secondItem="NfY-BJ-7dk" secondAttribute="trailing" constant="50" id="iAw-6K-fLH"/>
+                            <constraint firstItem="xG6-PK-10a" firstAttribute="top" secondItem="vxn-wW-2WC" secondAttribute="bottom" constant="5" id="j7v-b3-PdU"/>
+                            <constraint firstItem="veO-0F-HhN" firstAttribute="firstBaseline" secondItem="vnQ-kg-L8d" secondAttribute="firstBaseline" id="jSu-2F-sny"/>
+                            <constraint firstItem="8aY-tW-npf" firstAttribute="firstBaseline" secondItem="TiI-pl-7WM" secondAttribute="firstBaseline" id="jdO-my-kzm"/>
+                            <constraint firstItem="oM7-43-mZ5" firstAttribute="top" secondItem="qEW-Z3-x8i" secondAttribute="bottom" constant="25" id="kEX-wF-dGB"/>
+                            <constraint firstItem="vxn-wW-2WC" firstAttribute="top" secondItem="WWf-zI-dOU" secondAttribute="top" constant="4" id="l3S-34-lf9"/>
+                            <constraint firstItem="bHZ-kQ-p7E" firstAttribute="top" secondItem="pbY-EI-92d" secondAttribute="bottom" constant="5" id="mHZ-Lc-ye8"/>
+                            <constraint firstItem="BXz-U3-Z5I" firstAttribute="leading" secondItem="NfY-BJ-7dk" secondAttribute="trailing" constant="50" id="mf1-wR-Z5a"/>
+                            <constraint firstItem="8aY-tW-npf" firstAttribute="trailing" secondItem="keQ-bd-1sI" secondAttribute="trailing" id="nAW-rQ-hJn"/>
+                            <constraint firstItem="WWf-zI-dOU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="nmx-KR-Owa"/>
+                            <constraint firstItem="yN3-W6-MHU" firstAttribute="top" secondItem="Ll5-qY-o5i" secondAttribute="bottom" constant="4" id="ous-ah-7Ze"/>
+                            <constraint firstItem="qEW-Z3-x8i" firstAttribute="top" secondItem="WWf-zI-dOU" secondAttribute="bottom" constant="15" id="r5d-Eb-CzV"/>
+                            <constraint firstItem="4tg-k4-hl0" firstAttribute="top" secondItem="qEW-Z3-x8i" secondAttribute="top" constant="4" id="sHK-6n-EuB"/>
+                            <constraint firstItem="veO-0F-HhN" firstAttribute="trailing" secondItem="keQ-bd-1sI" secondAttribute="trailing" id="sNb-p2-GhZ"/>
+                            <constraint firstItem="OoB-6N-gzm" firstAttribute="top" secondItem="BXz-U3-Z5I" secondAttribute="bottom" constant="5" id="tuO-D0-vlB"/>
+                            <constraint firstItem="vnQ-kg-L8d" firstAttribute="top" secondItem="4tg-k4-hl0" secondAttribute="bottom" constant="5" id="vr3-pe-mw8"/>
+                            <constraint firstItem="Fvb-ZR-e81" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="wKa-Ea-J2v"/>
+                            <constraint firstItem="oql-eL-IoZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="xaz-6i-4of"/>
+                            <constraint firstItem="oql-eL-IoZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="zF4-Sz-irA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="milkPriceLabel" destination="3Da-a4-tpa" id="gq0-rG-AWa"/>
+                        <outlet property="quantityOfMilkInOrderLabel" destination="chV-Og-XsJ" id="SLv-ts-TTa"/>
+                        <outlet property="quantityOfSugarInOrderLabel" destination="8aY-tW-npf" id="6LL-dO-0J0"/>
+                        <outlet property="quantityOfWhipInOrderLabel" destination="eWw-Rn-Mq5" id="NpU-6a-Z8O"/>
+                        <outlet property="simpleCoffeePriceLabel" destination="vDJ-8a-fyN" id="gLf-x0-6HL"/>
+                        <outlet property="sugarPriceLabel" destination="veO-0F-HhN" id="xEb-tr-MTj"/>
+                        <outlet property="totalAmountLabel" destination="Ll5-qY-o5i" id="HXB-hj-w3o"/>
+                        <outlet property="whipPriceLabel" destination="UK9-Yb-qlZ" id="Vp1-j6-x05"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="81.409295352323838"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Milk" width="236" height="236"/>
+        <image name="Sugar" width="596" height="596"/>
+        <image name="Whip" width="905" height="845"/>
+        <image name="cofee2" width="1920" height="1080"/>
+    </resources>
+</document>
